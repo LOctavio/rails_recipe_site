@@ -1,56 +1,57 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Project Name
+# Recipe Site
 
-> Description the project.
+> This is a website where the user will be able to add recipes, add ingredients and check recipes from other users. with also the feature of autogenerate a 
+shopping list to know what ingredients he has to buy to cook his dish.
 
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
-
-## Live Demo (if available)
-
-[Live Demo Link](https://livedemo.com)
+- Ruby
+- Ruby on Rails
+- Devise, rspec, capybara, cancancan
 
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
-
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
+- Ruby 
+- rails
+- rubygems
 
 ### Setup
-
+- Clone the repository
+```
+git clone <REPO-NAME>
+```
 ### Install
 
+- Install dependencies
+```
+bundle install
+```
+
 ### Usage
-
-### Run tests
-
-### Deployment
-
-
+- Run rails server
+```
+rails s
+```
 
 ## Authors
 
-👤 **Author1**
+👤 **Enmanuel Lassis**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@elassis](https://github.com/elassis)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/enmanuel-lassis-pena)
 
-👤 **Author2**
+👤 **Luis Octavio Ramirez Cruz**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [LOctavio](https://github.com/LOctavio)
+- Twitter: [@Octavio_ram431](https://twitter.com/Octavio_ram431)
+- LinkedIn: [Luis Octavio Ramirez Cruz](https://www.linkedin.com/in/luis-octavio-ramirez-cruz/) 
 
 ## 🤝 Contributing
 
