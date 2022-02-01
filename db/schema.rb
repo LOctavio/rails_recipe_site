@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 2022_01_31_222258) do
     t.text "preparation_time"
     t.text "cooking_time"
     t.text "description"
-    t.boolean "public"
+    t.boolean "public", default: false
     t.integer "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
