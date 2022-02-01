@@ -5,6 +5,5 @@ Rails.application.routes.draw do
   root "recipes#public_recipes"
   resources :foods, except: [:update]
   resources :recipes, except: [:update]
-  resources :generalshoppinglist
-  get 'general_shopping_list', to: 'generalshoppinglist#index'
+  resources :general_shopping_lists
 end
