@@ -1,0 +1,11 @@
+<div>
+    <% @recipes.each do |recipe| %>
+        <div class="my-recipe-preview">
+            <div class="my-recipe-preview-title">
+                <span><%= recipe.name %></span>
+                <%= button_to 'REMOVE', recipe_path(recipe.id), method: :delete %>
+            </div>
+            <span><%= recipe.description %></span>
+        </div>
+    <% end %>
+</div>
