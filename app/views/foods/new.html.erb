@@ -1,0 +1,16 @@
+<h1>New Food</h1>
+<%= form_for :food, url: foods_path do |f| %>
+   <%= f.label :name %><br>
+   <%= f.text_field :name %><br>
+
+   <%= f.label :measurement_unit %><br>
+   <%= f.text_field :measurement_unit %><br>
+
+   <%= f.label :price%><br>
+   <%= f.number_field :price, value:0%><br>
+   <p>
+    <%= f.submit %>
+  </p>
+
+
+<% end %>

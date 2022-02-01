@@ -1,5 +1,5 @@
 class Recipe < ActiveRecord::Base
-  has_many :recipesfoods
+  has_many :recipefood
   belongs_to :user
 
   validates :name, presence: true

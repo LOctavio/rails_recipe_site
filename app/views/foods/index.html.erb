@@ -1,0 +1,33 @@
+<button onclick="location.href='<%= new_food_path %>'">Add food</button>
+<table>
+	<tr>
+		<td>
+      food
+    </td>
+    <td>
+      measurement unit
+    </td>
+    <td>
+      price
+    </td>
+    <td>
+    	actions
+    </td>    
+  <tr>
+  <% @foods.each do |f|%>
+    <tr>
+      <td>
+        <%= f.name %>
+      </td>
+      <td>
+        <%= f.measurement_unit %>
+      </td>
+      <td>
+        <%= f.price %>
+      </td>
+      <td>
+        <button>delete</button>
+      </td>
+    </tr>
+  <% end %>
+</table>
