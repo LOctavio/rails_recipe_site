@@ -6,6 +6,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+    @published = @recipe[:public] == true ? 'checked' : ''
     @food_array = @recipe.show_foods(@recipe.id)
   end
 

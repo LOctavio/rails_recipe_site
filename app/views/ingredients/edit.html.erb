@@ -1,0 +1,11 @@
+<h1>Modify Ingredient</h1>
+<%= form_for :ingredient, url: update_ingredient_path do |f| %>
+   <%= f.label :food %><br>
+   <%= f.hidden_field :id, value:@ingredient[:id] %>
+   <%= f.text_field :name , value:@food[:name], :disabled => true %><br>
+   <%= f.label :quantity%><br>
+   <%= f.number_field :quantity, value:@ingredient[:quantity]%><br>
+   <p>
+   <%= f.submit %>
+  </p>
+<% end %>
