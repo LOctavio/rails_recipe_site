@@ -8,6 +8,10 @@
     </div>
     <div>
       <p>public</p>
+      <label class="switch">
+        <input type="checkbox" <%= @published %> >
+        <span class="slider"></span>
+      </label>
     </div>
   </div> 
   <div class="details-recipe-buttons-section"> 
@@ -43,8 +47,8 @@
     <%= f[:ingredient_value]%>  
     </td>
     <td>
-      <button>modify</button>
-        <button>delete</button>
+      <button onclick="location.href='<%= edit_ingredient_path(:id => f[:ingredient_id]) %>'">modify</button>
+      <%= button_to 'remove', delete_ingredient_path(:id => f[:ingredient_id]), method: :delete %>
       </td>
   </tr>
  <% end %>

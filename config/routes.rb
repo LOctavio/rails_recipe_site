@@ -7,4 +7,6 @@ Rails.application.routes.draw do
   resources :recipes, except: [:update]
   resources :general_shopping_lists
   resources :ingredients
+  post '/ingredients/:id', to: 'ingredients#update', as: "update_ingredient"
+  delete '/ingredients/:id', to: 'ingredients#destroy', as: "delete_ingredient"
 end
