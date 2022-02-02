@@ -6,7 +6,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
-    @food_array = @recipe.show_foods(@recipe.id)    
+    @food_array = @recipe.show_foods(@recipe.id)
   end
 
   def destroy
@@ -14,5 +14,7 @@ class RecipesController < ApplicationController
     redirect_to recipes_path
   end
 
-  def public_recipes; end
+  def public_recipes
+    @recipes = Recipe.where(public: true).order(created_at: :desc)
+  end
 end
