@@ -22,4 +22,16 @@ class Recipe < ApplicationRecord
     end
     foods_ingredients
   end
+
+  def total_food_items
+    ingredient.all.count
+  end
+
+  def total_price
+    total = 0
+    ingredient.all.each do |ingredient|
+      total += ingredient.quantity * ingredient.food.price
+    end
+    total
+  end
 end

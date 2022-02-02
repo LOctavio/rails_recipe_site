@@ -14,5 +14,7 @@ class RecipesController < ApplicationController
     redirect_to recipes_path
   end
 
-  def public_recipes; end
+  def public_recipes
+    @recipes = Recipe.where(public: true).order(created_at: :desc)
+  end
 end
