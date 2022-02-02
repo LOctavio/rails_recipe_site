@@ -1,0 +1,51 @@
+<section>
+  <h2 class="recipe-title"><%= @recipe.name%></h2>
+  <div class="details-recipe">
+    <div class="details-recipe-section-data">
+      <p>preparation time:<%= @recipe.preparation_time%></p>
+      <p>cooking time: <%= @recipe.cooking_time%></p>
+      <p><%= @recipe.description%></p>
+    </div>
+    <div>
+      <p>public</p>
+    </div>
+  </div> 
+  <div class="details-recipe-buttons-section"> 
+    <button>generate shopping list</button>
+    <button onclick="location.href='<%= new_ingredient_path(:recipe_id => @recipe.id) %>'">Add ingredient</button>
+  </div>   
+</section>
+<hr>
+<table>
+	<tr>
+		<td>
+      food
+    </td>
+    <td>
+      quantity
+    </td>
+    <td>
+      value
+    </td>
+    <td>
+    	actions
+    </td>    
+  </tr>
+  <% @food_array.each do |f|%>
+  <tr>
+    <td>
+      <%= f[:food_name] %>  
+    </td>
+    <td>  
+    <%= "#{f[:ingredient_quantity]} #{f[:food_measurement_unit]}"%>
+    </td>
+    <td> 
+    <%= f[:ingredient_value]%>  
+    </td>
+    <td>
+      <button>modify</button>
+        <button>delete</button>
+      </td>
+  </tr>
+ <% end %>
+</table>
