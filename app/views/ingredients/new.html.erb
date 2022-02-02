@@ -1,0 +1,15 @@
+<h1>New Ingredient</h1>
+<%= form_for :ingredient, url: ingredients_path do |f| %>
+   <%= f.label :food %><br>
+   <%= f.select :food, @foods.each do |food| %>
+        [<%= food.name %>]
+     <% end %>
+
+   <%= f.label :quantity%><br>
+   <%= f.number_field :quantity, value:0%><br>
+   <p>
+    <%= f.submit %>
+  </p>
+
+
+<% end %>

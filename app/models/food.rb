@@ -1,5 +1,5 @@
 class Food < ApplicationRecord
-  has_many :recipe_food
+  has_many :ingredient
   belongs_to :user
   validates :name, uniqueness: { message: 'name is already taken' }, presence: true
 

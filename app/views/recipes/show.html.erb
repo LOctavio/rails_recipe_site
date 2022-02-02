@@ -12,7 +12,7 @@
   </div> 
   <div class="details-recipe-buttons-section"> 
     <button>generate shopping list</button>
-    <button>add ingredient</button>
+    <button onclick="location.href='<%= new_ingredient_path(:recipe_id => @recipe.id) %>'">Add ingredient</button>
   </div>   
 </section>
 <hr>
@@ -34,12 +34,13 @@
   <% @food_array.each do |f|%>
   <tr>
     <td>
-      <%= f.name %>  
+      <%= f[:food_name] %>  
     </td>
     <td>  
-      
+    <%= "#{f[:ingredient_quantity]} #{f[:food_measurement_unit]}"%>
     </td>
-    <td>   
+    <td> 
+    <%= f[:ingredient_value]%>  
     </td>
     <td>
       <button>modify</button>
