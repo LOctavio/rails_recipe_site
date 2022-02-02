@@ -5,6 +5,7 @@
    <%= f.select :food_id, @foods.all.map{|food| [food.name,food.id]} %><br>
    <%= f.label :quantity%><br>
    <%= f.number_field :quantity, value:0%><br>
+   <%= f.hidden_field :recipe_id, value: params[:recipe_id] %>
    <p>
     <%= f.submit %>
   </p>
