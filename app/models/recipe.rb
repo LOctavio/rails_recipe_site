@@ -12,11 +12,11 @@ class Recipe < ApplicationRecord
     array_of_ingredients = Ingredient.includes(:recipe).where("recipe_id = #{recipe_id}")
     array_of_ingredients.each do |r|
       food = Food.find(r.food_id)
-      #create a hash to store required data
+      # create a hash to store required data
       h = {
-        ingredient_id: r.id, ingredient_quantity: r.quantity, 
-        ingredient_value: r.quantity * food.price,food_name: food.name, 
-        food_measurement_unit: food.measurement_unit,
+        ingredient_id: r.id, ingredient_quantity: r.quantity,
+        ingredient_value: r.quantity * food.price, food_name: food.name,
+        food_measurement_unit: food.measurement_unit
       }
       foods_ingredients.push(h)
     end

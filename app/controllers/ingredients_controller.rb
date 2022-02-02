@@ -1,11 +1,10 @@
 class IngredientsController < ApplicationController
-    def index   
-    end
-    def new
-      recipe_id = params[:recipe_id]
-      @foods = Food.all 
+  def index; end
 
-    end
-    def create
-    end
+  def new
+    # recipe_id = params[:recipe_id]
+    @foods = Food.all
+  end
+
+  def create; end
 end
