@@ -6,10 +6,10 @@ class CreateRecipes < ActiveRecord::Migration[6.1]
       t.text :cooking_time
       t.text :description
       t.boolean :public, :default => false
-      t.integer :user_id
+      
 
       t.timestamps
     end
-    add_index :recipes, :user_id
+    
   end
 end
