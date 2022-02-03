@@ -19,5 +19,8 @@ user.recipe.create(name: 'Peanut Butter Cookies', preparation_time: '20 minutes'
 user.recipe.create(name: 'Chocolate Hazelnut Mug Cakes', preparation_time: '20 minutes', cooking_time: '10 minutes', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus.', public: true)
 
 Ingredient.create(quantity:5,food_id:1,recipe_id:1)
+Ingredient.create(quantity:7,food_id:2,recipe_id:1)
 Ingredient.create(quantity:10,food_id:3,recipe_id:1)
+Ingredient.create(quantity:2,food_id:3,recipe_id:2)
+Ingredient.create(quantity:4,food_id:4,recipe_id:2)
 Ingredient.create(quantity:10,food_id:5,recipe_id:2)

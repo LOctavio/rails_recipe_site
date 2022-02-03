@@ -1,3 +1,5 @@
 class GeneralShoppingListsController < ApplicationController
-  def index; end
+  def index
+    @ingredients = curren_user.missing_ingredients
+  end
 end
