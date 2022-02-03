@@ -16,7 +16,9 @@
   </div> 
   <div class="details-recipe-buttons-section"> 
     <button onclick="location.href='<%= general_shopping_lists_path %>'">generate shopping list</button>
-    <button onclick="location.href='<%= new_ingredient_path(:recipe_id => @recipe.id) %>'">Add ingredient</button>
+    <% if can? :manage, @recipe %>
+      <button onclick="location.href='<%= new_ingredient_path(:recipe_id => @recipe.id) %>'">Add ingredient</button>
+    <%  end %>
   </div>   
 </section>
 <hr>
