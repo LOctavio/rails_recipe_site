@@ -1,5 +1,5 @@
 class Recipe < ApplicationRecord
-  has_many :ingredient
+  has_many :ingredient, dependent: :delete_all
   belongs_to :user
 
   validates :name, presence: true
@@ -8,19 +8,7 @@ class Recipe < ApplicationRecord
   validates :description, presence: true
 
   def show_foods(recipe_id)
-    foods_ingredients = []
-    array_of_ingredients = Ingredient.includes(:recipe).where("recipe_id = #{recipe_id}")
-    array_of_ingredients.each do |r|
-      food = Food.find(r.food_id)
-      # create a hash to store required data
-      h = {
-        ingredient_id: r.id, ingredient_quantity: r.quantity,
-        ingredient_value: r.quantity * food.price, food_name: food.name,
-        food_measurement_unit: food.measurement_unit
-      }
-      foods_ingredients.push(h)
-    end
-    foods_ingredients
+    Ingredient.includes(:recipe, :food).where(recipe_id: recipe_id)
   end
 
   def total_food_items

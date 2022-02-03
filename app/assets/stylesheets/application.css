@@ -91,3 +91,8 @@ input:checked + .slider {
 input:checked + .slider::before {
   transform: translateX(20px);
 }
+
+table {
+  width: 100%;
+  padding: 10px;
+}
