@@ -38,18 +38,18 @@
   <% @food_array.each do |f|%>
   <tr>
     <td>
-      <%= f[:food_name] %>  
+      <%= f.food.name %>  
     </td>
     <td>  
-    <%= "#{f[:ingredient_quantity]} #{f[:food_measurement_unit]}"%>
+      <%= "#{f.quantity} #{f.food.measurement_unit}" %>
     </td>
     <td> 
-    <%= f[:ingredient_value]%>  
+     <%= f.quantity * f.food.price %>
     </td>
     <td>
-      <button onclick="location.href='<%= edit_ingredient_path(:id => f[:ingredient_id]) %>'">modify</button>
-      <%= button_to 'remove', delete_ingredient_path(:id => f[:ingredient_id]), method: :delete %>
-      </td>
+      <button onclick="location.href='<%= edit_ingredient_path(:id => f.id) %>'">modify</button>
+      <%= button_to 'remove', delete_ingredient_path(:id => f.id), method: :delete %>
+    </td>
   </tr>
  <% end %>
 </table>
