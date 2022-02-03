@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   def index
-    user = curren_user
+    user = current_user
     @recipes = user.recipe.all
   end
 
@@ -15,7 +15,7 @@ class RecipesController < ApplicationController
   end
 
   def create
-    @user = curren_user
+    @user = current_user
     @post = @user.recipe.create(recipe_params)
     redirect_to recipes_path
   end
