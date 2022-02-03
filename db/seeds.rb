@@ -8,6 +8,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user = User.create(name:'mike',email:'mike@gmail.com',password:'123456')
+user2 = User.create(name:'luis',email:'luis@gmail.com',password:'123456')
 
 user.food.create(name: 'peanut butter', measurement_unit: 'grams', price: 5)
 user.food.create(name: 'sugar', measurement_unit: 'grams', price: 3)
