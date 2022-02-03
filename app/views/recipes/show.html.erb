@@ -15,25 +15,25 @@
     </div>
   </div> 
   <div class="details-recipe-buttons-section"> 
-    <button>generate shopping list</button>
+    <button onclick="location.href='<%= general_shopping_lists_path %>'">generate shopping list</button>
     <button onclick="location.href='<%= new_ingredient_path(:recipe_id => @recipe.id) %>'">Add ingredient</button>
   </div>   
 </section>
 <hr>
 <table>
 	<tr>
-		<td>
+		<th>
       food
-    </td>
-    <td>
+    </th>
+    <th>
       quantity
-    </td>
-    <td>
+    </th>
+    <th>
       value
-    </td>
-    <td>
+    </th>
+    <th>
     	actions
-    </td>    
+    </th>    
   </tr>
   <% @food_array.each do |f|%>
   <tr>
