@@ -5,7 +5,7 @@ RSpec.describe 'recipe list view', type: :system do
       before do
         visit new_user_session_path
           User.create(name: 'mat', email: 'mat@gmail.com', password: '123456')
-          Recipe.create(name:'cookies',preparation_time:'20min',cooking_time:'10min',description:'yummy',
+          Recipe.create!(name:'cookies',preparation_time:'20min',cooking_time:'10min',description:'yummy',
           public:true, user_id:1)
           sleep(1)
           page.fill_in 'Email', with: 'mat@gmail.com'
@@ -19,8 +19,8 @@ RSpec.describe 'recipe list view', type: :system do
         visit recipe_path(id:1)
         sleep(5)
         expect(page).to have_content('cookies')
-        expect(page).to have_selector(:link_or_button, 'generate shopping list')
-        expect(page).to have_selector(:link_or_button, 'Add ingredient')
+        click_button('generate shopping list')
+        expect(page).to have_content('Amount of food items to buy')
       end
     end
 end
