@@ -14,7 +14,9 @@
   <tbody>
     <% @ingredients.each do |ingredient| %>  
       <tr>
-      <td><%= ingredient.ingredient.quantity %></td>
+      <td><%= ingredient.name %></td>
+      <td><%= ingredient.quantity %> <%= ingredient.measurement_unit %></td>
+      <td><%= ingredient.price %></td>
       </tr>
     <% end %>
   </tbody>
