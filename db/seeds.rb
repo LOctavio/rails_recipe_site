@@ -7,7 +7,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-user = User.create(name:'mike')
+user = User.create(name:'mike',email:'mike@gmail.com',password:'123456')
+user2 = User.create(name:'luis',email:'luis@gmail.com',password:'123456')
 
 user.food.create(name: 'peanut butter', measurement_unit: 'grams', price: 5)
 user.food.create(name: 'sugar', measurement_unit: 'grams', price: 3)
@@ -16,7 +17,8 @@ user.food.create(name: 'chocolate', measurement_unit: 'grams', price: 3)
 user.food.create(name: 'flour', measurement_unit: 'grams', price: 1)
 
 user.recipe.create(name: 'Peanut Butter Cookies', preparation_time: '20 minutes', cooking_time: '10 minutes', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus.', public: true)
-user.recipe.create(name: 'Chocolate Hazelnut Mug Cakes', preparation_time: '20 minutes', cooking_time: '10 minutes', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus.', public: true)
+user.recipe.create(name: 'Chocolate Hazelnut Mug Cakes', preparation_time: '20 minutes', cooking_time: '10 minutes', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus.')
+user2.recipe.create(name: 'Chocolate Hazelnut Mug Cakes', preparation_time: '20 minutes', cooking_time: '10 minutes', description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse cursus.', public: true)
 
 Ingredient.create(quantity:5,food_id:1,recipe_id:1)
 Ingredient.create(quantity:7,food_id:2,recipe_id:1)

@@ -96,3 +96,31 @@ table {
   width: 100%;
   padding: 10px;
 }
+
+td {
+  text-align: center;
+}
+
+.shopping-list-total {
+  display: flex;
+  justify-content: space-evenly;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
+
+table,
+th,
+td {
+  padding: 10px;
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+.shopping-list-table {
+  width: 50%;
+  margin: 40px auto;
+}

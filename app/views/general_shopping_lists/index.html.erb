@@ -1,5 +1,9 @@
 <h1>Shopping List</h1>
-<table>
+<div class="shopping-list-total">
+  <span>Amount of food items to buy: <%= current_user.food_items_to_buy %></span>
+  <span>Total value of food needed: <%= current_user.value_of_food_needed %></span>
+</div>
+<table class="shopping-list-table">
   <thead>
     <tr>
       <th>Food</th>
