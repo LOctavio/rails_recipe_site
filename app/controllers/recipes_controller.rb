@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
   load_and_authorize_resource
-  
+
   def index
     user = current_user
     @recipes = user.recipe.all

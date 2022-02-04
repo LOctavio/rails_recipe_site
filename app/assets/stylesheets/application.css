@@ -101,7 +101,7 @@ td {
   text-align: center;
 }
 
-.shopping-list-total  {
+.shopping-list-total {
   display: flex;
   justify-content: space-evenly;
   font-size: 24px;
