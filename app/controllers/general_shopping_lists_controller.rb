@@ -1,5 +1,6 @@
 class GeneralShoppingListsController < ApplicationController
   def index
-    @ingredients = current_user.missing_ingredients
+    @user = User.new
+    @ingredients = @user.missing_ingredients(current_user.id)
   end
 end

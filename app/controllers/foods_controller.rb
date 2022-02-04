@@ -8,7 +8,7 @@ class FoodsController < ApplicationController
   def new; end
 
   def create
-    @user = User.find(1)
+    @user = current_user
     params_to_save = post_params
     @new_food = @user.food.create(params_to_save)
     if @new_food.save
