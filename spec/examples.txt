@@ -1,14 +1,14 @@
 example_id                                 | status | run_time      |
 ------------------------------------------ | ------ | ------------- |
-./spec/views/add_food_spec.rb[1:1:1]       | passed | 9.76 seconds  |
-./spec/views/add_food_spec.rb[1:1:2]       | passed | 12.09 seconds |
-./spec/views/food_spec.rb[1:1:1]           | passed | 9.68 seconds  |
-./spec/views/login_spec.rb[1:1:1]          | passed | 3.25 seconds  |
-./spec/views/login_spec.rb[1:1:2]          | passed | 4.37 seconds  |
-./spec/views/login_spec.rb[1:1:3]          | passed | 6.59 seconds  |
-./spec/views/login_spec.rb[1:1:4]          | passed | 6.55 seconds  |
-./spec/views/public_recipes_spec.rb[1:1:1] | passed | 6.59 seconds  |
-./spec/views/recipe_details_spec.rb[1:1:1] | passed | 11.64 seconds |
-./spec/views/recipes_list_spec.rb[1:1:1]   | passed | 6.67 seconds  |
-./spec/views/recipes_list_spec.rb[1:1:2]   | passed | 11.62 seconds |
-./spec/views/shooping_list_spec.rb[1:1:1]  | passed | 13.39 seconds |
+./spec/views/add_food_spec.rb[1:1:1]       | passed | 10.15 seconds |
+./spec/views/add_food_spec.rb[1:1:2]       | failed | 14.62 seconds |
+./spec/views/food_spec.rb[1:1:1]           | passed | 9.94 seconds  |
+./spec/views/login_spec.rb[1:1:1]          | passed | 3.34 seconds  |
+./spec/views/login_spec.rb[1:1:2]          | passed | 4.57 seconds  |
+./spec/views/login_spec.rb[1:1:3]          | passed | 6.83 seconds  |
+./spec/views/login_spec.rb[1:1:4]          | passed | 6.73 seconds  |
+./spec/views/public_recipes_spec.rb[1:1:1] | passed | 6.92 seconds  |
+./spec/views/recipe_details_spec.rb[1:1:1] | passed | 12.05 seconds |
+./spec/views/recipes_list_spec.rb[1:1:1]   | passed | 7.05 seconds  |
+./spec/views/recipes_list_spec.rb[1:1:2]   | passed | 14.12 seconds |
+./spec/views/shooping_list_spec.rb[1:1:1]  | passed | 12.22 seconds |
