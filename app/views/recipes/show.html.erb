@@ -1,0 +1,57 @@
+<section>
+  <h2 class="recipe-title"><%= @recipe.name%></h2>
+  <div class="details-recipe">
+    <div class="details-recipe-section-data">
+      <p>preparation time:<%= @recipe.preparation_time%></p>
+      <p>cooking time: <%= @recipe.cooking_time%></p>
+      <p><%= @recipe.description%></p>
+    </div>
+    <div>
+      <p>public</p>
+      <label class="switch">
+        <input type="checkbox" <%= @published %> >
+        <span class="slider"></span>
+      </label>
+    </div>
+  </div> 
+  <div class="details-recipe-buttons-section"> 
+    <button onclick="location.href='<%= general_shopping_lists_path %>'">generate shopping list</button>
+    <% if can? :manage, @recipe %>
+      <button onclick="location.href='<%= new_ingredient_path(:recipe_id => @recipe.id) %>'">Add ingredient</button>
+    <%  end %>
+  </div>   
+</section>
+<hr>
+<table>
+	<tr>
+		<th>
+      food
+    </th>
+    <th>
+      quantity
+    </th>
+    <th>
+      value
+    </th>
+    <th>
+    	actions
+    </th>    
+  </tr>
+  <% @food_array.each do |f|%>
+  <tr>
+    <td>
+      <%= f.food.name %>  
+    </td>
+    <td>  
+      <%= "#{f.quantity} #{f.food.measurement_unit}" %>
+    </td>
+    <td> 
+     <%= f.quantity * f.food.price %>
+    </td>
+    <td>
+      <button onclick="location.href='<%= edit_ingredient_path(:id => f.id) %>'">modify</button>
+      <%= button_to 'remove', delete_ingredient_path(:id => f.id), method: :delete %>
+    </td>
+  </tr>
+ <% end %>
+</table>
